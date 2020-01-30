@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To Do List</title>
+    <meta name="description" content="todo list">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./stylesheets/build/style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Kanban To-Do List</h1>
+    </div>
+
+    <div class="container">
+        
+        <div class="task-list">
+            <h3>To Do</h3>
+            <ul class="list" id="toDo"></ul>
+        </div>
+
+        <div class="task-list">
+            <h3>In Progress</h3>
+            <ul class="list" id="inProgress"></ul>
+        </div>
+
+        <div class="task-list">
+            <h3>Done</h3>
+            <ul class="list" id="done"></ul>
+        </div>
+
+    </div>
+
+    <button class="trigger" id="modalTrigger">Add Task</button>
+    
+    <div class="modal" id="addTaskModal">
+        <div class="modal-content">
+            <span class="close-button" id="closeAddTaskModal">×</span>
+            <form action="#" class="modal-form">
+                
+                <label for="list">Select Task List</label>
+                <select name="list" id="list" class="input-field">
+                    <option value="1" selected>To Do</option>
+                    <option value="2">In Progress</option>
+                    <option value="3">Done</option>
+                </select>
+
+                <label for="task-content">Enter task description</label>
+                <input type="text" id="taskContent" name="task-content" class="input-field" required>
+
+                <button id="submitTaskAddition" type="submit" value="createTask" class="trigger">Create Task</button>
+
+            </form>
+        </div>
+    </div>
+
+
+</body>
+<script src="./javascripts/indexScript.js"></script>
+
+</html>
